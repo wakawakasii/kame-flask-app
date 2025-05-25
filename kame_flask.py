@@ -36,7 +36,7 @@ def index():
             (0.00001, "芸能人と付き合える確率（約0.00001%）"),
             (15.0, "バレンタインでチョコ貰う確率（約15%）")
         ]
-        comp_sorted = sorted(comp, key=lambda c: abs(total_prob - c[0]), reverse=True)[:4]
+        comp_sorted = comp_sorted = random.sample(comp, 4)
         comparison_text = "<ul>"
         for c in comp_sorted:
             ratio_value = total_prob / c[0] if c[0] else float('inf')
